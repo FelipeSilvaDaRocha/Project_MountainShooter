@@ -60,9 +60,9 @@ class Level:
                     self.timeout -= TIMEOUT_STEP
                     if self.timeout == 0:
                         for ent in self.entity_list:
-                            if isinstance(ent, Player) and self.name == 'Player1':
+                            if isinstance(ent, Player) and ent.name == 'Player1':
                                 player_score[0] = ent.score
-                            if isinstance(ent, Player) and self.name == 'Player2':
+                            if isinstance(ent, Player) and ent.name == 'Player2':
                                 player_score[1] = ent.score
                         return True
 
